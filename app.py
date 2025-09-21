@@ -3,6 +3,10 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
+# --- Streamlit App Configuration ---
+st.set_page_config(layout="wide", page_title="Customer Case Analysis")
+
+
 # --- Data Loading and Cleaning ---
 # Using st.cache_data to cache the data loading and cleaning, so it runs only once when the app starts.
 @st.cache_data
@@ -34,9 +38,6 @@ def load_and_clean_data():
     return df
 
 df = load_and_clean_data()
-
-# --- Streamlit App Configuration ---
-st.set_page_config(layout="wide", page_title="Customer Case Analysis")
 
 # --- Streamlit App Title and Introduction ---
 st.title("Customer Case Analysis Dashboard")
